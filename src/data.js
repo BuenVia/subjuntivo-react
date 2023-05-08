@@ -116,6 +116,48 @@ const sentences = [
         two: "en las vacaciones! Se lo merecen.",
         clue: "(ellos, divertirse)",
         answer: "se diviertan"
+      },      
+      {
+        one: "Espero que",
+        two: "(usted, entender)",
+        clue: "las instrucciones para llegar, si no,  llámeme a este número: 656-32-32-32.",
+        answer: "entienda"
+      },      
+      {
+        one: "¡Ojalá tu padre nos",
+        two: "entradas para el concierto de Pablo Alborán.  ",
+        clue: "(conseguir)",
+        answer: "consiga"
+      },      
+      {
+        one: "¡No me",
+        two: "eso a mí que no me gusta! ¡Sabes que no como carne!",
+        clue: "(pedir)",
+        answer: "pidas"
+      },      
+      {
+        one: "¡Hasta luego! ¡Que",
+        two: "!",
+        clue: "(vosotros, divertirse)",
+        answer: "os divirtáis"
+      },      
+      {
+        one: "Me he presentado a responsable de mi departamento. Espero que me",
+        two: "para el puesto.",
+        clue: "(ellos, elegir)",
+        answer: "elijan"
+      },      
+      {
+        one: "¡Cuántos anuncios! ¡Ojalá",
+        two: "ya la película!",
+        clue: "(empezar)",
+        answer: "empiece"
+      },      
+      {
+        one: "Con esas zapatillas se van a reír de mí y no quiero que",
+        two: "de mí.",
+        clue: "(ellos, reírse)",
+        answer: "se rían"
       }
     ]
   },
