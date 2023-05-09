@@ -11,6 +11,21 @@ body {
   background-color: whitesmoke;
 }
 
+.App {
+
+}
+
+.header {
+  padding: 1em;
+  background-color: #2471A3;
+  color: whitesmoke;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .choice-box {
   padding: 1em;
   margin: 1em;
@@ -18,7 +33,13 @@ body {
   text-align: center;
   background-color: white;
   border-radius: 0.25em;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.choice-box:hover {
+  transition: 200ms;
+  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -27,14 +48,14 @@ body {
   width: 70px;
   border: none;
   border-radius: 0.25rem;
-  background-color: #9700dd;
+  background-color: #2471A3;
   color: whitesmoke;
   cursor: pointer;
 }
 
 .btn:hover {
   transition: 150ms;
-  background-color: #650b8f;
+  background-color: #1A5276;
 }
 
 .question-card {

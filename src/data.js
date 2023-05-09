@@ -41,8 +41,8 @@ const sentences = [
       },
       {
         one: "¿Cuándo os vais a casar? - No lo sabemos pero seguramente",
-        two: "(casarse)",
-        clue: "en junio del año que viene.",
+        two: "en junio del año que viene.",
+        clue: "(casarse)",
         answer: "nos casemos"
       },
       {
@@ -119,8 +119,8 @@ const sentences = [
       },      
       {
         one: "Espero que",
-        two: "(usted, entender)",
-        clue: "las instrucciones para llegar, si no,  llámeme a este número: 656-32-32-32.",
+        two: "las instrucciones para llegar, si no,  llámeme a este número: 656-32-32-32.",
+        clue: "(usted, entender)",
         answer: "entienda"
       },      
       {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from './components/Header'
 import ChoiceCard from "./components/ChoiceCard";
 import QuestionCard from "./components/QuestionCard";
 import sentences from "./data";
@@ -17,19 +18,22 @@ export default function App() {
 
   return (
     <div className="App">
-      {choice === null ? (
-        sentences.map((sentence) => {
-          return (
-            <ChoiceCard
+      <Header />
+      <div className="container">
+        {choice === null ? (
+          sentences.map((sentence) => {
+            return (
+              <ChoiceCard
               key={sentence.id}
               sentence={sentence}
               getChoice={getChoiceHandler}
-            />
-          );
-        })
-      ) : (
-        <QuestionCard choice={choice} close={closeQuestionCard} />
-      )}
+              />
+              );
+            })
+            ) : (
+          <QuestionCard choice={choice} close={closeQuestionCard} />
+          )}
+        </div>
     </div>
   );
 }
