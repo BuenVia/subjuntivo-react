@@ -1,0 +1,20 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eee;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  padding: 2em;
+  background-color: #222222;
+  color: #C84127;
+}/*# sourceMappingURL=App.css.map */

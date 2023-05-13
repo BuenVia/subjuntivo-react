@@ -1,0 +1,24 @@
+$orange: #C84127;
+$black: #222222;
+$white: #eee;
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  background-color: $white;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  padding: 2em;
+  background-color: $black;
+  color: $orange;
+}
