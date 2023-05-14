@@ -1,14 +1,14 @@
-import React from "react";
-import { Articles } from "../models"
+import React from 'react'
+import { Articles } from '../models'
 
-type Props = {
-    article: Articles
+interface Props {
+    currentArticle: Articles
 }
 
-const Article: React.FC<Props> = ({ article }) => {
+const Article: React.FC<Props> = ({ currentArticle }) => {
     return (
         <div>
-            <p>{article.title}</p>
+            <p>Article</p>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 $orange: #C84127;
 $black: #222222;
 $white: #eee;
+$charcol: #444444;
 
 *, *::after, *::before {
   margin: 0;
@@ -11,6 +12,7 @@ $white: #eee;
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
   background-color: $white;
+  color: $charcol;
 }
 
 .App {
@@ -21,4 +23,31 @@ body {
   padding: 2em;
   background-color: $black;
   color: $orange;
+}
+
+.table {
+  margin: auto;
+  margin-top: 2em;
+  width: 90%;
+  border-collapse: collapse;
+
+
+  .table-row {
+    border-top: 1px solid $charcol;
+    box-shadow: 0 1px 3px rgba($color: #000000, $alpha: 0.3);
+    cursor: pointer;
+  }
+  .table-row:hover {
+    transition: 200ms;
+    box-shadow: 0 1px 3px rgba($color: #000000, $alpha: 0.8);
+  }
+  
+  td {
+    padding: .5em;
+  }
+
+  .go-btn {
+    border: none;
+
+  }
 }

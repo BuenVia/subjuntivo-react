@@ -7,6 +7,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eee;
+  color: #444444;
 }
 
 .App {
@@ -17,4 +18,26 @@ body {
   padding: 2em;
   background-color: #222222;
   color: #C84127;
+}
+
+.table {
+  margin: auto;
+  margin-top: 2em;
+  width: 90%;
+  border-collapse: collapse;
+}
+.table .table-row {
+  border-top: 1px solid #444444;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.table .table-row:hover {
+  transition: 200ms;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.table td {
+  padding: 0.5em;
+}
+.table .go-btn {
+  border: none;
 }/*# sourceMappingURL=App.css.map */

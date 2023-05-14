@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
+import ArticleRow from './components/ArticleRow';
 import axios from 'axios';
 import { Articles } from './models'
 import Article from './components/Article';
@@ -8,6 +9,8 @@ import Article from './components/Article';
 const App: React.FC = () => {
 
   const [articles, setArticles] = useState<Articles[]>([])
+  const [showArticle, setShowArticle] = useState<boolean>(false)
+  const [currentArticle, setCurrentArticle] = useState({})
 
   const getArticles = async () => {
     const URL = 'http://localhost:8080/api/subjuntivo/read'
@@ -22,16 +25,33 @@ const App: React.FC = () => {
     getArticles()
   }, [])
 
-  console.log(articles);
+  // const showArticleHandler = () => {
+  //   setShowArticle(value => !value)
+  // }
+
+  const getSpecificArticle = (article: Articles) => {
+    console.log(article)
+    setCurrentArticle(article)
+  }
   
 
   return (
     <div className="App">
       <Header />
 
-      {articles.map(article => {
-        return <Article key={article.id} article={article} />
-      })}
+      <table className='table'>
+        <thead>
+            <th>Chapter</th>
+            <th>Title</th>
+            <th>Open</th>
+        </thead>
+        <tbody>
+          
+          {showArticle ? <Article currentArticle={currentArticle} /> : articles.map(article => {
+            return <ArticleRow key={article.id} article={article} getSpecificArticle={getSpecificArticle} />
+          })}
+        </tbody>
+      </table>
       
     </div>
   );
