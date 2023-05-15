@@ -4,20 +4,22 @@ import { Articles } from "../models"
 type Props = {
     article: Articles
     getSpecificArticle: (article: Articles) => void
+    showArticleHandler: () => void
 }
 
-const ArticleRow: React.FC<Props> = ({ article, getSpecificArticle }) => {
+const ArticleRow: React.FC<Props> = ({ article, getSpecificArticle, showArticleHandler }) => {
 
     const handleClick = (article: Articles) => {
         getSpecificArticle(article)
     }
 
     return (
-        <tr className="table-row">
-            <td>1</td>
-            <td><a onClick={() => handleClick(article)}>{article.title}</a></td>
-            <td><button className="go-btn">GO</button></td>
-        </tr>
+        <div>
+
+            <span>1</span>
+            <span><span onClick={() => {handleClick(article); showArticleHandler()}}>{article.title}</span></span>
+            <span><button className="go-btn">GO</button></span>
+        </div>
     )
 }
 

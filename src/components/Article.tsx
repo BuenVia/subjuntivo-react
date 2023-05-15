@@ -6,9 +6,13 @@ interface Props {
 }
 
 const Article: React.FC<Props> = ({ currentArticle }) => {
+
+    
+
     return (
         <div>
-            <p>Article</p>
+            <p>{currentArticle.title}</p>
+            {currentArticle.sanitizedHtml}
         </div>
     )
 }

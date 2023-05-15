@@ -10,7 +10,15 @@ const App: React.FC = () => {
 
   const [articles, setArticles] = useState<Articles[]>([])
   const [showArticle, setShowArticle] = useState<boolean>(false)
-  const [currentArticle, setCurrentArticle] = useState({})
+  const [currentArticle, setCurrentArticle] = useState<Articles>({
+    id: "",
+    title: "",
+    auth: "",
+    markdown: "",
+    sanitizedHtml: "",
+    createdAt: "",
+    slug: ""
+  })
 
   const getArticles = async () => {
     const URL = 'http://localhost:8080/api/subjuntivo/read'
@@ -25,12 +33,12 @@ const App: React.FC = () => {
     getArticles()
   }, [])
 
-  // const showArticleHandler = () => {
-  //   setShowArticle(value => !value)
-  // }
+  const showArticleHandler = () => {
+    console.log(true)
+    setShowArticle(value => !value)
+  }
 
   const getSpecificArticle = (article: Articles) => {
-    console.log(article)
     setCurrentArticle(article)
   }
   
@@ -39,19 +47,12 @@ const App: React.FC = () => {
     <div className="App">
       <Header />
 
-      <table className='table'>
-        <thead>
-            <th>Chapter</th>
-            <th>Title</th>
-            <th>Open</th>
-        </thead>
-        <tbody>
+
           
           {showArticle ? <Article currentArticle={currentArticle} /> : articles.map(article => {
-            return <ArticleRow key={article.id} article={article} getSpecificArticle={getSpecificArticle} />
+            return <ArticleRow key={article.id} article={article} getSpecificArticle={getSpecificArticle} showArticleHandler={showArticleHandler} />
           })}
-        </tbody>
-      </table>
+
       
     </div>
   );
