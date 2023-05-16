@@ -21,7 +21,7 @@ const App: React.FC = () => {
   })
 
   const getArticles = async () => {
-    const URL = 'http://localhost:8080/api/subjuntivo/read'
+    const URL = 'https://nsoxnw-8080.csb.app/api/subjuntivo/read'
     try {
       await axios.get(URL).then(res => setArticles(res.data))
     } catch (error) {
